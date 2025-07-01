@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical Engineer - Portfolio</title>
+    <!-- Google Fonts: Inter for body, Montserrat for headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Three.js Particle Background Canvas -->
+    <canvas id="three-bg"></canvas>
+    
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+
+    <!-- Gear Mechanism -->
+    <div class="gear-container">
+        <div class="gear gear1" id="gear1">
+            <svg class="gear-svg" viewBox="0 0 100 100">
+                <path d="M50,0 L58,15 L75,10 L80,25 L95,30 L90,47 L100,50 L95,58 L80,75 L75,80 L58,95 L50,100 L42,95 L25,80 L20,75 L5,58 L0,50 L5,42 L20,25 L25,20 L42,5 Z M50,25 A25,25 0 1,0 50,75 A25,25 0 1,0 50,25 Z"/>
+            </svg>
+        </div>
+        <div class="gear gear2" id="gear2">
+            <svg class="gear-svg" viewBox="0 0 100 100">
+                <path d="M50,0 L58,15 L75,10 L80,25 L95,30 L90,47 L100,50 L95,58 L80,75 L75,80 L58,95 L50,100 L42,95 L25,80 L20,75 L5,58 L0,50 L5,42 L20,25 L25,20 L42,5 Z M50,25 A25,25 0 1,0 50,75 A25,25 0 1,0 50,25 Z"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home" data-section="home" class="active">Home</a></li>
+            <li><a href="#portfolio" data-section="portfolio">Portfolio</a></li>
+            <li><a href="#resume" data-section="resume">Resume</a></li>
+            <li><a href="#projects" data-section="projects">Projects</a></li>
+            <li><a href="#journal" data-section="journal">Journal</a></li>
+            <li><a href="#research" data-section="research">Research</a></li>
+            <li><a href="#contact" data-section="contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main container -->
+    <div class="container">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Arafat Ahmed</h1>
+                    <p>Mechanical Research and Innovation Engineer</p>
+                    <p>Designing the future through precision engineering, innovative solutions, and sustainable manufacturing. Where mechanical mastery meets cutting-edge technology.</p>
+                    <div class="cta-buttons">
+                        <a href="#portfolio" class="btn btn-primary"><i class="fas fa-cogs"></i> View My Work</a>
+                        <a href="#contact" class="btn btn-secondary"><i class="fas fa-envelope"></i> Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats section -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="10">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="4">0</div>
+                    <div class="stat-label">CAD Software Mastered</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="1">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section">
+            <h2>Engineering Portfolio</h2>
+            <p>Showcasing mechanical design excellence and engineering solutions</p>
+            <div class="card-grid">
+                <div class="card" data-modal-type="portfolio" 
+                    data-title="Manufacturing Automation System" 
+                    data-description="Designed and implemented automated assembly line for automotive components, increasing efficiency by 40% and reducing production costs by 15%." 
+                    data-tech-stack='<span class="tech-tag automation-tag">PLC Programming</span><span class="tech-tag cad-tag">SolidWorks</span><span class="tech-tag manufacturing-tag">Lean Manufacturing</span><span class="tech-tag analysis-tag">SCADA</span>'
+                    data-image-url="https://placehold.co/800x450/007bff/ffffff?text=Automation+System"
+                    data-key-features='["Automated component feeding and assembly", "Integrated quality control sensors", "Real-time data monitoring and analytics"]'
+                    data-challenges-solutions='["Challenge: High initial setup cost. Solution: Implemented phased deployment and optimized component sourcing.", "Challenge: Integration with legacy systems. Solution: Developed custom API connectors and middleware."]'
+                >
+                    <h3><span class="card-icon"><i class="fas fa-industry"></i></span>Manufacturing Automation System</h3>
+                    <p>Designed and implemented automated assembly line for automotive components, increasing efficiency by 40% and reducing production costs by 15%.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag automation-tag">PLC Programming</span>
+                        <span class="tech-tag cad-tag">SolidWorks</span>
+                        <span class="tech-tag manufacturing-tag">Lean Manufacturing</span>
+                        <span class="tech-tag analysis-tag">SCADA</span>
+                    </div>
+                </div>
+                <div class="card" data-modal-type="portfolio" 
+                    data-title="Precision Mechanical Components" 
+                    data-description="Developed high-precision mechanical components for aerospace applications with tolerances within ±0.001mm, leading to a 20% reduction in material waste." 
+                    data-tech-stack='<span class="tech-tag cad-tag">CATIA</span><span class="tech-tag analysis-tag">ANSYS</span><span class="tech-tag manufacturing-tag">CNC Machining</span><span class="tech-tag">GD&T</span>'
+                    data-image-url="https://placehold.co/800x450/6c5ce7/ffffff?text=Precision+Components"
+                    data-key-features='["Ultra-high precision machining", "Advanced material selection for aerospace", "Complex geometric tolerance control"]'
+                    data-challenges-solutions='["Challenge: Achieving sub-micron tolerances. Solution: Utilized advanced CNC techniques and post-machining finishing processes.", "Challenge: Material stress and fatigue. Solution: Performed extensive FEA and material testing."]'
+                >
+                    <h3><span class="card-icon"><i class="fas fa-screwdriver"></i></span>Precision Mechanical Components</h3>
+                    <p>Developed high-precision mechanical components for aerospace applications with tolerances within ±0.001mm, leading to a 20% reduction in material waste.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag cad-tag">CATIA</span>
+                        <span class="tech-tag analysis-tag">ANSYS</span>
+                        <span class="tech-tag manufacturing-tag">CNC Machining</span>
+                        <span class="tech-tag">GD&T</span>
+                    </div>
+                </div>
+                <div class="card" data-modal-type="portfolio" 
+                    data-title="Thermal Management System" 
+                    data-description="Engineered advanced cooling system for high-performance electronics, achieving 30% better heat dissipation through innovative fin design and optimized airflow." 
+                    data-tech-stack='<span class="tech-tag analysis-tag">CFD Analysis</span><span class="tech-tag cad-tag">Fusion 360</span><span class="tech-tag">Heat Transfer</span><span class="tech-tag manufacturing-tag">3D Printing</span>'
+                    data-image-url="https://placehold.co/800x450/0056b3/ffffff?text=Thermal+System"
+                    data-key-features='["Optimized fin geometry for maximum surface area", "Integrated micro-channels for liquid cooling", "Passive and active cooling modes"]'
+                    data-challenges-solutions='["Challenge: Miniaturization while maintaining performance. Solution: Employed 3D printing for complex internal geometries.", "Challenge: Preventing hot spots. Solution: Performed iterative CFD simulations and thermal mapping."]'
+                >
+                    <h3><span class="card-icon"><i class="fas fa-thermometer-half"></i></span>Thermal Management System</h3>
+                    <p>Engineered advanced cooling system for high-performance electronics, achieving 30% better heat dissipation through innovative fin design and optimized airflow.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag analysis-tag">CFD Analysis</span>
+                        <span class="tech-tag cad-tag">Fusion 360</span>
+                        <span class="tech-tag">Heat Transfer</span>
+                        <span class="tech-tag manufacturing-tag">3D Printing</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="section">
+            <h2>Professional Experience</h2>
+            <div class="card">
+                <h3><i class="fas fa-briefcase"></i> Experience</h3>
+                <div style="margin-bottom: 30px;">
+                    <h4 style="color: var(--primary-color); margin-bottom: 5px;">Senior Mechanical Engineer</h4>
+                    <p style="color: var(--accent-color); margin-bottom: 10px;">Advanced Manufacturing Corp • 2022 - Present</p>
+                    <p>Lead mechanical design team in developing next-generation manufacturing equipment. Specialized in automation systems, precision mechanics, and process optimization, resulting in a 25% increase in production line throughput.</p>
+                </div>
+                <div style="margin-bottom: 30px;">
+                    <h4 style="color: var(--primary-color); margin-bottom: 5px;">Design Engineer</h4>
+                    <p style="color: var(--accent-color); margin-bottom: 10px;">Innovative Solutions Ltd • 2020 - 2022</p>
+                    <p>Designed mechanical systems for industrial applications. Focused on CAD modeling, FEA analysis, and prototype development using rapid manufacturing techniques, reducing design cycle time by 18%.</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                <div>
+                    <h4 style="color: var(--primary-color); margin-bottom: 5px;">Bachelor of Mechanical Engineering</h4>
+                    <p style="color: var(--accent-color); margin-bottom: 10px;">Technical University • 2020</p>
+                    <p>Graduated Magna Cum Laude. Specialized in mechanical design, thermodynamics, and manufacturing processes. Thesis on sustainable manufacturing techniques, recognized for its potential to reduce carbon footprint in industrial production.</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-tools"></i> Technical Skills</h3>
+                <div class="tech-stack">
+                    <span class="tech-tag cad-tag">SolidWorks</span>
+                    <span class="tech-tag cad-tag">AutoCAD</span>
+                    <span class="tech-tag cad-tag">CATIA</span>
+                    <span class="tech-tag analysis-tag">ANSYS</span>
+                    <span class="tech-tag analysis-tag">MATLAB</span>
+                    <span class="tech-tag manufacturing-tag">CNC Programming</span>
+                    <span class="tech-tag automation-tag">PLC Programming</span>
+                    <span class="tech-tag">GD&T</span>
+                    <span class="tech-tag manufacturing-tag">3D Printing</span>
+                    <span class="tech-tag">Six Sigma</span>
+                    <span class="tech-tag materials-tag">FEA</span>
+                    <span class="tech-tag energy-tag">Thermodynamics</span>
+                    <span class="tech-tag robotics-tag">Robotics</span>
+                    <span class="tech-tag sustainability-tag">Sustainable Design</span>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="placeholder_resume.pdf" download="Your_Name_Resume.pdf" class="btn btn-primary"><i class="fas fa-download"></i> Download Full Resume</a>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2>Engineering Projects</h2>
+            <p>Personal projects and engineering challenges</p>
+            <div class="card-grid">
+                <div class="card" data-modal-type="project" 
+                    data-title="Formula SAE Racing Car" 
+                    data-description="Designed and manufactured chassis, suspension, and drivetrain components for university Formula SAE team, achieving top 10 finish in national competition and exceeding performance targets by 10%." 
+                    data-tech-stack='<span class="tech-tag cad-tag">SolidWorks</span><span class="tech-tag analysis-tag">FEA</span><span class="tech-tag manufacturing-tag">Carbon Fiber</span><span class="tech-tag">Motorsports</span>'
+                    data-image-url="https://placehold.co/800x450/28a745/ffffff?text=Formula+SAE+Car"
+                    data-key-features='["Lightweight composite chassis design", "Optimized aerodynamic package", "High-performance suspension geometry"]'
+                    data-challenges-solutions='["Challenge: Weight reduction while maintaining rigidity. Solution: Extensive use of carbon fiber and topology optimization.", "Challenge: Engine cooling under racing conditions. Solution: Designed custom intake and exhaust systems with CFD validation."]'
+                >
+                    <h3><span class="card-icon"><i class="fas fa-car-side"></i></span>Formula SAE Racing Car</h3>
+                    <p>Designed and manufactured chassis, suspension, and drivetrain components for university Formula SAE team, achieving top 10 finish in national competition and exceeding performance targets by 10%.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag cad-tag">SolidWorks</span>
+                        <span class="tech-tag analysis-tag">FEA</span>
+                        <span class="tech-tag manufacturing-tag">Carbon Fiber</span>
+                        <span class="tech-tag">Motorsports</span>
+                    </div>
+                </div>
+                <div class="card" data-modal-type="project" 
+                    data-title="Renewable Energy Storage" 
+                    data-description="Developed mechanical energy storage system using advanced flywheel technology for grid-scale renewable energy applications, demonstrating 90% energy efficiency." 
+                    data-tech-stack='<span class="tech-tag analysis-tag">Dynamics</span><span class="tech-tag cad-tag">CATIA</span><span class="tech-tag">Composite Materials</span><span class="tech-tag energy-tag">Energy Systems</span>'
+                    data-image-url="https://placehold.co/800x450/fd7e14/ffffff?text=Energy+Storage"
+                    data-key-features='["High-speed flywheel for kinetic energy storage", "Magnetic levitation bearing system", "Integrated power conversion electronics"]'
+                    data-challenges-solutions='["Challenge: Minimizing energy loss during storage. Solution: Developed a vacuum-sealed, low-friction environment for the flywheel.", "Challenge: System safety and stability. Solution: Implemented robust containment and active balancing mechanisms."]'
+                >
+                    <h3><span class="card-icon"><i class="fas fa-battery-full"></i></span>Renewable Energy Storage</h3>
+                    <p>Developed mechanical energy storage system using advanced flywheel technology for grid-scale renewable energy applications, demonstrating 90% energy efficiency.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag analysis-tag">Dynamics</span>
+                        <span class="tech-tag cad-tag">CATIA</span>
+                        <span class="tech-tag">Composite Materials</span>
+                        <span class="tech-tag energy-tag">Energy Systems</span>
+                    </div>
+                </div>
+                <div class="card" data-modal-type="project" 
+                    data-title="Robotic Gripper System" 
+                    data-description="Engineered adaptive robotic gripper with force feedback for delicate object manipulation in automated assembly applications, improving handling precision by 35%." 
+                    data-tech-stack='<span class="tech-tag automation-tag">Robotics</span><span class="tech-tag cad-tag">Fusion 360</span><span class="tech-tag manufacturing-tag">3D Printing</span><span class="tech-tag">Control Systems</span>'
+                    data-image-url="https://placehold.co/800x450/dc3545/ffffff?text=Robotic+Gripper"
+                    data-key-features='["Adaptive finger design for various object shapes", "Integrated force sensors for delicate handling", "Modular end-effector for quick changeovers"]'
+                    data-challenges-solutions='["Challenge: Gripping fragile and irregular objects. Solution: Developed a compliant mechanism with soft robotic elements.", "Challenge: Real-time force feedback control. Solution: Implemented a robust PID control loop with high-speed sensor integration."]'
+                >
+                    <h3><span class="card-icon"><i class="fas fa-robot"></i></span>Robotic Gripper System</h3>
+                    <p>Engineered adaptive robotic gripper with force feedback for delicate object manipulation in automated assembly applications, improving handling precision by 35%.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag automation-tag">Robotics</span>
+                        <span class="tech-tag cad-tag">Fusion 360</span>
+                        <span class="tech-tag manufacturing-tag">3D Printing</span>
+                        <span class="tech-tag">Control Systems</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journal Section -->
+        <section id="journal" class="section">
+            <h2>Engineering Journal</h2>
+            <p>Technical insights and engineering experiences</p>
+            <div class="journal-entry" data-modal-type="journal" 
+                data-title="The Future of Additive Manufacturing in Aerospace" 
+                data-description="Exploring how advanced 3D printing technologies are revolutionizing aerospace component manufacturing. From titanium alloy printing to topology optimization, the possibilities are expanding rapidly, promising lighter and stronger components." 
+                data-date="December 15, 2024"
+                data-image-url="https://placehold.co/800x450/17a2b8/ffffff?text=Additive+Manufacturing"
+                data-key-features='["On-demand part production", "Reduced material waste", "Complex geometries for performance gains"]'
+                data-challenges-solutions='["Challenge: Material property consistency. Solution: Advanced process control and post-processing techniques.", "Challenge: Certification for aerospace applications. Solution: Strict adherence to industry standards and rigorous testing protocols."]'
+            >
+                <div class="journal-date">December 15, 2024</div>
+                <h3>The Future of Additive Manufacturing in Aerospace</h3>
+                <p>Exploring how advanced 3D printing technologies are revolutionizing aerospace component manufacturing. From titanium alloy printing to topology optimization, the possibilities are expanding rapidly, promising lighter and stronger components.</p>
+            </div>
+            <div class="journal-entry" data-modal-type="journal" 
+                data-title="Sustainable Design in Mechanical Engineering" 
+                data-description="Reflecting on the integration of sustainability principles in mechanical design. How lifecycle assessment and eco-design methodologies are reshaping engineering practices, leading to reduced environmental impact." 
+                data-date="November 28, 2024"
+                data-image-url="https://placehold.co/800x450/007bff/ffffff?text=Sustainable+Design"
+                data-key-features='["Lifecycle assessment integration", "Material selection for recyclability", "Energy efficiency in product use"]'
+                data-challenges-solutions='["Challenge: Balancing performance with environmental impact. Solution: Multi-objective optimization during the design phase.", "Challenge: Supply chain transparency. Solution: Collaborating with suppliers committed to sustainable practices."]'
+            >
+                <div class="journal-date">November 28, 2024</div>
+                <h3>Sustainable Design in Mechanical Engineering</h3>
+                <p>Reflecting on the integration of sustainability principles in mechanical design. How lifecycle assessment and eco-design methodologies are reshaping engineering practices, leading to reduced environmental impact.</p>
+            </div>
+            <div class="journal-entry" data-modal-type="journal" 
+                data-title="Digital Twin Technology in Manufacturing" 
+                data-description="The transformative potential of digital twins in predictive maintenance and process optimization. Real-world applications and implementation challenges in industrial settings, enhancing operational efficiency." 
+                data-date="October 10, 2024"
+                data-image-url="https://placehold.co/800x450/6c5ce7/ffffff?text=Digital+Twin"
+                data-key-features='["Real-time performance monitoring", "Predictive maintenance scheduling", "Process optimization through simulation"]'
+                data-challenges-solutions='["Challenge: Data integration from disparate systems. Solution: Developed a unified data platform and standardized protocols.", "Challenge: Model accuracy and validation. Solution: Continuous model refinement with operational data and machine learning."]'
+            >
+                <div class="journal-date">October 10, 2024</div>
+                <h3>Digital Twin Technology in Manufacturing</h3>
+                <p>The transformative potential of digital twins in predictive maintenance and process optimization. Real-world applications and implementation challenges in industrial settings, enhancing operational efficiency.</p>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research" class="section">
+            <h2>Research & Development</h2>
+            <p>Technical research and engineering innovations</p>
+            <div class="card-grid">
+                <div class="card" data-modal-type="research" 
+                    data-title="Advanced Materials Research" 
+                    data-description="Investigation of shape-memory alloys for adaptive mechanical systems. Focus on actuation mechanisms and temperature-responsive applications, demonstrating novel material behaviors." 
+                    data-tech-stack='<span class="tech-tag materials-tag">Materials Science</span><span class="tech-tag analysis-tag">Mechanical Testing</span><span class="tech-tag">Smart Materials</span>'
+                    data-image-url="https://placehold.co/800x450/ffc107/333333?text=Smart+Materials"
+                    data-key-features='["Temperature-induced shape change", "High fatigue resistance", "Biocompatibility for medical applications"]'
+                    data-challenges-solutions='["Challenge: Controlling actuation speed and force. Solution: Developed precise thermal control systems and alloy compositions.", "Challenge: Long-term material stability. Solution: Conducted accelerated aging tests and microstructural analysis."]'
+                >
+                    <h3><span class="card-icon"><i class="fas fa-flask"></i></span>Advanced Materials Research</h3>
+                    <p>Investigation of shape-memory alloys for adaptive mechanical systems. Focus on actuation mechanisms and temperature-responsive applications, demonstrating novel material behaviors.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag materials-tag">Materials Science</span>
+                        <span class="tech-tag analysis-tag">Mechanical Testing</span>
+                        <span class="tech-tag">Smart Materials</span>
+                    </div>
+                </div>
+                <div class="card" data-modal-type="research" 
+                    data-title="Energy Harvesting Systems" 
+                    data-description="Development of mechanical energy harvesting devices for IoT sensors in industrial environments. Vibration and thermal energy conversion mechanisms, providing sustainable power solutions." 
+                    data-tech-stack='<span class="tech-tag energy-tag">Energy Conversion</span><span class="tech-tag analysis-tag">Vibration Analysis</span><span class="tech-tag">IoT Applications</span>'
+                    data-image-url="https://placehold.co/800x450/0056b3/ffffff?text=Energy+Harvesting"
+                    data-key-features='["Piezoelectric energy conversion", "Thermoelectric generators", "Low-power electronics integration"]'
+                    data-challenges-solutions='["Challenge: Efficiency at low vibration frequencies. Solution: Designed resonant structures to amplify ambient vibrations.", "Challenge: Powering diverse IoT devices. Solution: Developed adaptable power management circuits."]'
+                >
+                    <h3><span class="card-icon"><i class="fas fa-bolt"></i></span>Energy Harvesting Systems</h3>
+                    <p>Development of mechanical energy harvesting devices for IoT sensors in industrial environments. Vibration and thermal energy conversion mechanisms, providing sustainable power solutions.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag energy-tag">Energy Conversion</span>
+                        <span class="tech-tag analysis-tag">Vibration Analysis</span>
+                        <span class="tech-tag">IoT Applications</span>
+                    </div>
+                </div>
+                <div class="card" data-modal-type="research" 
+                    data-title="Sustainable Manufacturing Processes" 
+                    data-description="Research on reducing environmental impact in manufacturing through process optimization and waste reduction strategies, leading to more eco-friendly production cycles." 
+                    data-tech-stack='<span class="tech-tag sustainability-tag">Sustainability</span><span class="tech-tag manufacturing-tag">Process Optimization</span><span class="tech-tag">Lifecycle Assessment</span>'
+                    data-image-url="https://placehold.co/800x450/28a745/ffffff?text=Eco-Friendly+Mfg"
+                    data-key-features='["Closed-loop material recycling", "Reduced energy consumption in production", "Minimized hazardous waste generation"]'
+                    data-challenges-solutions='["Challenge: Economic viability of green processes. Solution: Identified cost-saving opportunities through waste valorization.", "Challenge: Industry adoption of new methods. Solution: Developed case studies demonstrating clear environmental and economic benefits."]'
+                >
+                    <h3><span class="card-icon"><i class="fas fa-leaf"></i></span>Sustainable Manufacturing Processes</h3>
+                    <p>Research on reducing environmental impact in manufacturing through process optimization and waste reduction strategies, leading to more eco-friendly production cycles.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag sustainability-tag">Sustainability</span>
+                        <span class="tech-tag manufacturing-tag">Process Optimization</span>
+                        <span class="tech-tag">Lifecycle Assessment</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Let's Engineer Something Great</h2>
+            <p>Ready to collaborate on your next mechanical engineering challenge</p>
+            <div class="contact-form">
+                <div id="formMessage" style="display: none; text-align: center; margin-bottom: 20px; color: var(--accent-color); font-weight: 600;">
+                    Thank you for your message! I will get back to you soon.
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Full Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Project Type</label>
+                        <input type="text" id="subject" name="subject" placeholder="e.g., Product Design, Manufacturing Automation" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Project Details</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Describe your engineering challenge and how I can help..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Project Brief</button>
+                </form>
+            </div>
+            <div style="text-align: center; margin-top: 60px;">
+                <p style="font-size: 1.1rem; color: var(--text-primary);">Or reach me directly:</p>
+                <p style="color: var(--accent-color); margin-top: 15px; font-size: 1.2rem;">
+                    <i class="fas fa-envelope"></i> engineer@domain.com<br>
+                    <i class="fas fa-phone"></i> +1 (555) 123-4567<br>
+                    <i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/yourprofile" target="_blank" style="color: var(--accent-color); text-decoration: none; transition: color 0.3s ease;">linkedin.com/in/yourprofile</a><br>
+                    <span style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 10px; display: block;">Available for consulting & design projects</span>
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <img id="modalImage" class="modal-image" src="" alt="Project Image" onerror="this.style.display='none'">
+            <p id="modalDescription"></p>
+            <div id="modalTechStack" class="tech-stack"></div>
+
+            <div id="modalKeyFeatures">
+                <h3 class="modal-section-title">Key Features</h3>
+                <ul class="modal-list"></ul>
+            </div>
+            <div id="modalChallengesSolutions">
+                <h3 class="modal-section-title">Challenges & Solutions</h3>
+                <ul class="modal-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Three.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
